@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --border-radius: 10px;
+}
+
+html,
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.base {
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left,
+.right {
+    width: 50%;
+    align-self: stretch;
+}
+
+.left {
+    margin-right: 20px;
+}
+
+.left-input {
+    margin-bottom: 1.5rem;
+}
+
+.left-input label,
+.select {
+    font-size: 0.7rem;
+    color: hsl(184, 14%, 56%);
+    margin-bottom: 1rem;
+}
+
+.form-input input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 15px;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+.form-input input::placeholder {
+    font-family: 'Space Mono', monospace;
+}
+
+.form-input {
+    width: 100%;
+    display: flex;
+    background-color: hsl(189, 41%, 97%);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 0.4rem 0;
+}
+
+.form-input:hover,
+.form-input:focus-within {
+    background-color: hsl(189, 41%, 97%);
+    border: 1px solid hsl(172, 67%, 45%);
+}
+
+.form-input input:focus {
+    outline: none;
+}
+
+.form-input input::-webkit-inner-spin-button,
+.form-input input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.form-input span {
+    width: 45px;
+    text-align: center;
+    color: hsl(185, 41%, 84%);
+}
+
+.buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 10px 0;
+    margin-bottom: 1.5rem;
+}
+
+.buttons .btn {
+    font-family: 'Space Mono', monospace;
+    padding: 0.4rem 0;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    border: hsl(183, 100%, 15%);
+    color: #fff;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.buttons .btn:hover {
+    background-color: hsl(172, 67%, 50%);
+    color: hsl(183, 100%, 20%);
+}
+
+.buttons .custom {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(184, 14%, 56%);
+}
+
+.buttons .custom:focus {
+    background-color: #fff;
+    border-style: solid;
+    border-color: hsl(172, 67%, 45%);
+    border-width: 1px;
+}
+
+.btn:focus {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 20%);
+}
+
+.right {
+    background-color: hsl(183, 100%, 15%);
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tip-info .tip-title {
+    font-size: .7rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.tip-info .tip-subtitle {
+    font-size: .6rem;
+    color: hsl(189, 41%, 97%);
+    opacity: 0.5;
+}
+
+.tip-amount,
+#tip-amount {
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+    font-family: 'Space Mono', monospace;
+}
+
+.reset-btn {
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: hsl(183, 100%, 20%);
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    font-family: inherit;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.reset-btn:hover {
+    background-color: hsl(172, 67%, 50%);
+    color: hsl(183, 100%, 20%);
+}
+
+
+/* Frontend Mentor */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+@media screen and (max-width: 300px) {
+    .base {
+        flex-direction: column;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    .left,
+    .right {
+        width: 100%;
+        align-self: stretch;
+        min-height: 100%;
+    }
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 750px) {
+    .base {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        width: 100%;
+        align-self: stretch;
+        min-height: 100%;
+    }
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
